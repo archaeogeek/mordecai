@@ -75,12 +75,12 @@ Are you sure it's running?
 Mordecai needs access to the Geonames/Elasticsearch gazetteer to function.
 See https://github.com/openeventdata/mordecai#installation-and-requirements
 for instructions on setting up Geonames/Elasticsearch""".format(es_hosts, es_port))
-        es_date = utilities.check_geonames_date(self.conn)
-        mod_date = "2020-07-11"
-        if es_date != mod_date:
-            print("""You may be using an outdated Geonames index/Mordecai version.
-Your index is from {0}, while your Mordecai version is from {1}. Please see
-https://github.com/openeventdata/mordecai/ for instructions on updating.""".format(es_date, mod_date))
+        # es_date = utilities.check_geonames_date(self.conn)
+        # mod_date = "2020-07-11"
+        # if es_date != mod_date:
+        #     print("""You may be using an outdated Geonames index/Mordecai version.
+# Your index is from {0}, while your Mordecai version is from {1}. Please see
+# https://github.com/openeventdata/mordecai/ for instructions on updating.""".format(es_date, mod_date))
 
 
     def _feature_country_mentions(self, doc):
